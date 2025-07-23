@@ -1,31 +1,29 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, Button, StyleSheet, Alert } from 'react-native';
 
-const App = () => {
+export default function App() {
+  const handleNotification = () => {
+    Alert.alert("🔔 Incoming Notification", "This is a test push notification!");
+  };
+
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>React Native Notification App</Text>
-      <Text style={styles.subtext}>Push notifications will be integrated here.</Text>
+      <Text style={styles.heading}>React Native Notification App</Text>
+      <Button title="Simulate Notification" onPress={handleNotification} />
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    padding: 20,
   },
-  text: {
-    fontSize: 20,
+  heading: {
+    fontSize: 22,
     fontWeight: 'bold',
-  },
-  subtext: {
-    fontSize: 14,
-    color: '#666',
-    marginTop: 10,
+    marginBottom: 20,
   },
 });
-
-export default App;

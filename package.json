@@ -1,11 +1,12 @@
 {
-  "name": "react-native-notification-app",
+  "name": "ReactNativeNotificationApp",
   "version": "1.0.0",
-  "description": "Conceptual React Native Push Notification App",
   "main": "App.js",
   "scripts": {
-    "start": "node backend_simulation/trigger.js"
+    "start": "react-native start"
   },
-  "author": "Sakshi Gunjal",
-  "license": "MIT"
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-native": "^0.72.0"
+  }
 }
